@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">Na_ocene</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
+    <string name="Nastepny">Nastepny</string>
+    <string name="Kamera">Kamera</string>
+    <string name="Poprzedni">Poprzedni</string>
+    <string name="wyczyść">wyczyść</string>
+    <string name="Obrazek">Obrazek</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="aktywuj">Aktywuj</string>
+
+
 </resources>
