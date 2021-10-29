@@ -13,12 +13,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var CheckBox = findViewById<CheckBox>(R.id.checkBox)
-        var ImageView =findViewById<ImageView>(R.id.Obraz)
-        CheckBox.setOnClickListener(){
-            ImageView.visibility = View.VISIBLE;
+        var ImageView = findViewById<ImageView>(R.id.Obraz)
+        CheckBox.setOnClickListener() {
+            if (ImageView.getVisibility() == View.INVISIBLE) {
+                ImageView.setVisibility(View.VISIBLE); }
+            else{
+                ImageView.setVisibility(View.INVISIBLE);
             }
 
         }
 
     }
+}
 
