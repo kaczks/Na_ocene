@@ -1,9 +1,12 @@
 package com.example.na_ocene
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.widget.CheckBox
 import android.widget.ImageButton
@@ -91,8 +94,23 @@ class MainActivity : AppCompatActivity() {
             ImageButton_kamera.isEnabled = true
         }
 
+        ImageButton_kamera.setOnClickListener{
+            var i =Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            startActivityForResult(i, 101)
+        }
+
+
     }
 
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode==101){
+           var pic: Bitmap?
+           pic = data?.getParcelableExtra<Bitmap>("data")
+            findViewById<ImageView>(R.id.Obraz).setImageBitmap(pic)
+        }
+    }
 
         override fun onRequestPermissionsResult(
             requestCode: Int,
